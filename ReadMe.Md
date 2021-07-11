@@ -19,5 +19,6 @@ make push all
 make deploy-all
 ```
 
-<img width="855" alt="Screen Shot 2021-07-11 at 10 47 28 AM" src="https://user-images.githubusercontent.com/1936983/125205183-e0f18200-e235-11eb-8395-428a95d65078.png">
-<img width="855" alt="Screen Shot 2021-07-11 at 10 39 27 AM" src="https://user-images.githubusercontent.com/1936983/125205188-e353dc00-e235-11eb-9e6e-af722f4664b8.png">
+<img width="865" alt="Screen Shot 2021-07-11 at 10 51 44 AM" src="https://user-images.githubusercontent.com/1936983/125205208-03839b00-e236-11eb-8f9e-0c99430dcf08.png">
+<img width="1083" alt="Screen Shot 2021-07-11 at 10 51 36 AM" src="https://user-images.githubusercontent.com/1936983/125205216-07afb880-e236-11eb-8ff8-f1eaa3dd8249.png">
+
