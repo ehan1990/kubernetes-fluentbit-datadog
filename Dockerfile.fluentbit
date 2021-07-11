@@ -1,0 +1,22 @@
+FROM ubuntu:20.04
+
+STOPSIGNAL SIGINT
+
+RUN apt-get update
+RUN apt-get install wget curl nano gnupg2 -y
+
+RUN wget https://github.com/hairyhenderson/gomplate/releases/download/v3.9.0/gomplate_linux-amd64
+RUN chmod +x gomplate_linux-amd64
+RUN mv gomplate_linux-amd64 /usr/local/bin/gomplate
+
+RUN wget -qO - https://packages.fluentbit.io/fluentbit.key | apt-key add -
+RUN echo "deb https://packages.fluentbit.io/ubuntu/focal focal main" >> /etc/apt/sources.list
+
+RUN apt-get update && apt-get install td-agent-bit -y
+RUN mkdir -p /tmp/log
+
+WORKDIR /app
+COPY fluentbit/td-agent-bit.conf.template .
+COPY fluentbit/run.sh .
+
+CMD ["./run.sh"]
